@@ -2,16 +2,24 @@
 
 A Machine Learning-powered procurement analytics platform that predicts freight costs and identifies high-risk invoices to support smarter purchasing decisions and improve operational efficiency.
 
+<p align="center">
+
+  🚀 **[Live Application – Launch Streamlit App](https://vendorinvoicesystem.streamlit.app/)**
+
+</p>
+
+---
+
 ## 📌 Overview
 
 Procurement teams often handle large volumes of vendor invoices and transportation costs, making it difficult to identify unusual expenses and potential invoice risks manually.
 
-The Vendor Invoice Intelligence Portal leverages Machine Learning techniques to automate procurement analytics through:
+The **Vendor Invoice Intelligence Portal** leverages Machine Learning techniques to automate procurement analytics through:
 
-* Freight Cost Prediction
-* Invoice Risk Flagging
-* Feature Engineering
-* Interactive Business Intelligence Dashboard
+- Freight Cost Prediction
+- Invoice Risk Flagging
+- Feature Engineering
+- Interactive Business Intelligence Dashboard
 
 The system enables procurement teams to make data-driven decisions, improve cost visibility, and proactively identify potentially risky transactions.
 
@@ -19,23 +27,37 @@ The system enables procurement teams to make data-driven decisions, improve cost
 
 ## 🚀 Key Features
 
-### Freight Cost Prediction
+### 1. Freight Cost Prediction
 
 Predicts expected freight costs using historical procurement and transportation data.
 
-### Invoice Risk Flagging
+- Estimates transportation expenses.
+- Analyzes historical procurement patterns.
+- Uses trained regression models for cost prediction.
+
+### 2. Invoice Risk Flagging
 
 Identifies potentially risky invoices based on procurement patterns and transactional indicators.
 
-### Feature Engineering Pipeline
+- Detects potentially suspicious invoices.
+- Classifies invoice risk levels.
+- Helps prioritize invoice verification.
+
+### 3. Feature Engineering Pipeline
 
 Transforms raw procurement data into business-relevant predictive features.
 
-### Real-Time Predictions
+- Vendor performance indicators.
+- Delivery delay metrics.
+- Purchase aggregation features.
+- Invoice characteristics.
+- Cost-related variables.
+
+### 4. Real-Time Predictions
 
 Allows users to generate predictions through an interactive Streamlit application.
 
-### Business Decision Support
+### 5. Business Decision Support
 
 Provides actionable insights for procurement optimization and invoice review processes.
 
@@ -43,33 +65,44 @@ Provides actionable insights for procurement optimization and invoice review pro
 
 ## 🧠 Machine Learning Approach
 
-### Regression Module
+The project implements two major Machine Learning modules.
 
-Used for freight cost estimation.
+### Regression Module – Freight Cost Prediction
 
-**Models Evaluated**
+Used for estimating transportation and freight expenses.
 
-* Linear Regression
-* Decision Tree Regressor
-* Random Forest Regressor
+**Models Evaluated:**
 
-### Classification Module
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
 
-Used for invoice risk detection.
+**Optimization Techniques:**
 
-**Model Used**
+- GridSearchCV
+- Cross Validation
+- Model Performance Comparison
 
-* Decision Tree Classifier
+### Classification Module – Invoice Risk Detection
 
-### Hyperparameter Optimization
+Used for identifying potentially risky invoices.
 
-* GridSearchCV
-* Cross Validation
-* Model Performance Comparison
+**Model Used:**
+
+- Decision Tree Classifier
+
+**Evaluation Techniques:**
+
+- Accuracy Score
+- Weighted F1 Score
+- Classification Report
+- Confusion Matrix
 
 ---
 
 ## 📊 Data Processing Pipeline
+
+The project follows a structured Machine Learning workflow:
 
 1. Procurement Data Collection
 2. Data Cleaning
@@ -88,12 +121,12 @@ Used for invoice risk detection.
 
 The system derives business-focused features from procurement and invoice records, including:
 
-* Vendor Performance Indicators
-* Delivery Delay Metrics
-* Purchase Aggregation Features
-* Invoice Characteristics
-* Cost-Related Variables
-* Procurement Activity Patterns
+- Vendor Performance Indicators
+- Delivery Delay Metrics
+- Purchase Aggregation Features
+- Invoice Characteristics
+- Cost-Related Variables
+- Procurement Activity Patterns
 
 These engineered features improve predictive accuracy and business relevance.
 
@@ -103,19 +136,21 @@ These engineered features improve predictive accuracy and business relevance.
 
 ### Freight Cost Prediction
 
-| Metric                    | Result |
-| ------------------------- | ------ |
-| R² Score                  | 0.97   |
-| Mean Absolute Error (MAE) | 24.46  |
+| Evaluation Metric | Result |
+|---|---:|
+| R² Score | 0.97 |
+| Mean Absolute Error (MAE) | 24.46 |
 
 ### Invoice Risk Flagging
 
-| Metric            | Result |
-| ----------------- | ------ |
-| Accuracy          | 82%    |
-| Weighted F1 Score | 0.82   |
+| Evaluation Metric | Result |
+|---|---:|
+| Accuracy | 82% |
+| Weighted F1 Score | 0.82 |
 
 The models demonstrated strong predictive capability and reliable performance on unseen data.
+
+*Note: Performance values represent the reported evaluation results of the trained models.*
 
 ---
 
@@ -123,39 +158,36 @@ The models demonstrated strong predictive capability and reliable performance on
 
 The platform helps procurement teams:
 
-* Estimate transportation expenses more accurately
-* Detect potentially risky invoices before approval
-* Reduce manual review effort
-* Improve procurement transparency
-* Support data-driven purchasing decisions
+- Estimate transportation expenses more accurately.
+- Detect potentially risky invoices before approval.
+- Reduce manual review effort.
+- Improve procurement transparency.
+- Support data-driven purchasing decisions.
+- Improve visibility into procurement operations.
 
 ---
 
 ## 💻 Technology Stack
 
 ### Programming Language
+- Python
 
-* Python
-
-### Libraries
-
-* Pandas
-* NumPy
-* Scikit-Learn
-* Matplotlib
-* Seaborn
-* Joblib
+### Libraries & Frameworks
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Joblib
 
 ### Deployment
+- Streamlit
 
-* Streamlit
-
-### Machine Learning
-
-* Linear Regression
-* Decision Tree Regression
-* Random Forest Regression
-* Decision Tree Classification
+### Machine Learning Algorithms
+- Linear Regression
+- Decision Tree Regression
+- Random Forest Regression
+- Decision Tree Classification
 
 ---
 
@@ -166,13 +198,13 @@ The platform helps procurement teams:
 1. User enters procurement information.
 2. Data is preprocessed and transformed.
 3. Regression model estimates freight cost.
-4. Predicted cost is displayed.
+4. Predicted cost is displayed through the application.
 
 ### Invoice Risk Flagging
 
 1. User enters invoice details.
 2. Features are generated and processed.
-3. Classification model evaluates risk level.
+3. Classification model evaluates invoice risk.
 4. Risk prediction is displayed instantly.
 
 ---
@@ -183,42 +215,129 @@ The platform helps procurement teams:
 Vendor-Invoice-Intelligence-Portal/
 │
 ├── Freight Cost Prediction/
-    ├── data_preprocessing.py
-    ├── model_evaluation.py
-    ├── train.py
-    ├── models/
-        ├── predict_freight_model.pkl
+│   ├── data_preprocessing.py
+│   ├── model_evaluation.py
+│   ├── train.py
+│   └── models/
+│       └── predict_freight_model.pkl
+│
 ├── Inventory/
-    ├── begin_inventory.csv
-    ├── end_inventory.csv
-    ├── purchase_prices.csv
-    ├── vendor_invoice.csv
+│   ├── begin_inventory.csv
+│   ├── end_inventory.csv
+│   ├── purchase_prices.csv
+│   └── vendor_invoice.csv
+│
 ├── Invoice Flagging/
-    ├── data_preprocessing.py
-    ├── model_evaluation.py
-    ├── train.py
+│   ├── data_preprocessing.py
+│   ├── model_evaluation.py
+│   └── train.py
+│
 ├── inference/
-    ├── predict_freight.py
-    ├── predict_invoice_flag.py
+│   ├── predict_freight.py
+│   └── predict_invoice_flag.py
+│
 ├── models/
-    ├── predict_flag_invoice.pkl
-    ├── predict_freight_model.pkl
+│   ├── predict_flag_invoice.pkl
+│   └── predict_freight_model.pkl
+│
 ├── notebooks/
-    ├── Freight Cost notebook.ipynb
-    ├── Invoice Flagging notebook.ipynb
+│   ├── Freight Cost notebook.ipynb
+│   └── Invoice Flagging notebook.ipynb
+│
 ├── screenshots/
+│
 ├── README.md
+├── requirements.txt
 └── app.py
 ```
 
-## 🌟 Future Enhancements
+---
 
-* Advanced Ensemble Models
-* Explainable AI (XAI) Integration
-* Vendor Performance Dashboard
-* Automated Procurement Risk Scoring
-* Cloud Deployment
-* Real-Time Data Integration
+## ⚙️ Installation and Setup
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/aditya-madhu/Vendor-Invoice-Intelligence-Portal.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd Vendor-Invoice-Intelligence-Portal
+```
+
+### 3. Create a Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+```
+
+Activate the environment:
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the Streamlit Application
+
+```bash
+streamlit run app.py
+```
+
+The application will open in your browser, usually at:
+
+```text
+http://localhost:8501
+```
 
 ---
 
+## 🌐 Live Demo
+
+🚀 **Try the application online:**
+
+Experience freight cost prediction and invoice risk flagging through the deployed Streamlit application.
+
+### 👉 [Launch Vendor Invoice Intelligence Portal](https://vendorinvoicesystem.streamlit.app/)
+
+---
+
+## 🌟 Future Enhancements
+
+- Advanced Ensemble Models
+- Explainable AI (XAI) Integration
+- Vendor Performance Dashboard
+- Automated Procurement Risk Scoring
+- Cloud Deployment
+- Real-Time Data Integration
+- Advanced Anomaly Detection
+- Automated Invoice Verification
+
+---
+
+## ⭐ Support
+
+If you find this project interesting or useful, consider giving the repository a ⭐ on GitHub.
+
+Your support and feedback are appreciated!
+
+---
+
+**Built with Python, Machine Learning, and Streamlit.**
